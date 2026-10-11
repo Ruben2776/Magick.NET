@@ -40,14 +40,14 @@ copyToTestProject() {
 
     local quantum=$quantum$openmp
 
-    copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET net10.0
+    copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET net11.0
 
     if [ "$platform" = "windows" ]; then
         copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET net472
-        copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET.AvaloniaMediaImaging net10.0
-        copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET.SystemDrawing net10.0
+        copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET.AvaloniaMediaImaging net11.0
+        copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET.SystemDrawing net11.0
         copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET.SystemDrawing net472
-        copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET.SystemWindowsMedia net10.0
+        copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET.SystemWindowsMedia net11.0
         copyLibrary $sourceFolder $architecture $quantum $target_architecture Magick.NET.SystemWindowsMedia net472
     fi
 }
