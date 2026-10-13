@@ -49,7 +49,7 @@ jobs:
   linux_x64:
     name: Linux (${{ matrix.quantum }}, x64)
     container:
-      image: mcr.microsoft.com/dotnet/sdk:9.0
+      image: mcr.microsoft.com/dotnet/sdk:11.0
     runs-on: ubuntu-24.04
 
     strategy:
@@ -66,10 +66,10 @@ jobs:
       - name: Install dependencies
         run: build/linux-x64/install.dependencies.sh
 
-      - name: Install net10.0
+      - name: Install net11.0
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 #v6.0.0
         with:
-          dotnet-version: 10.x
+          dotnet-version: 11.x
 
       - name: Install Magick.Native
         run: build/shared/install.Magick.Native.sh linux x64 ${{ matrix.quantum }}
@@ -102,10 +102,10 @@ jobs:
       - name: Install dependencies
         run: build/linux-musl-x64/install.dependencies.sh
 
-      - name: Install net10.0
+      - name: Install net11.0
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 #v6.0.0
         with:
-          dotnet-version: 10.x
+          dotnet-version: 11.x
 
       - name: Install Magick.Native
         env:
@@ -136,10 +136,10 @@ jobs:
       - name: Install dependencies
         run: build/linux-arm64/install.dependencies.sh
 
-      - name: Install net10.0
+      - name: Install net11.0
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 #v6.0.0
         with:
-          dotnet-version: 10.x
+          dotnet-version: 11.x
 
       - name: Install Magick.Native
         env:
@@ -170,10 +170,10 @@ jobs:
       - name: Install dependencies
         run: build/macos-x64/install.dependencies.sh
 
-      - name: Install net10.0
+      - name: Install net11.0
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 #v6.0.0
         with:
-          dotnet-version: 10.x
+          dotnet-version: 11.x
 
       - name: Install Magick.Native
         env:
@@ -204,10 +204,10 @@ jobs:
       - name: Install dependencies
         run: build/macos-arm64/install.dependencies.sh
 
-      - name: Install net10.0
+      - name: Install net11.0
         uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 #v6.0.0
         with:
-          dotnet-version: 10.x
+          dotnet-version: 11.x
 
       - name: Install Magick.Native
         env:
